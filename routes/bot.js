@@ -27,7 +27,7 @@ bot.onText(/\/start/, async (msg) => {
   if (Stud_details.exists&&Stud_details.data().status == 'payment_done' && Stud_details.data().service_status == 'not_delivered') {
     if (Stud_details.data().status == 'payment_done' && Stud_details.data().service_status == 'not_delivered') {
       if (Stud_details.data().plan == 1) {
-        bot.sendMessage(msg.chat.id, `Through this message one time invite link of telegroup will be sent `)
+        bot.sendMessage(msg.chat.id, `Through this message one time invite link of telegroup will be sent after. This message is being sent after verification of payment `)
         let startDate = new Date();
         let endDate = new Date();
         endDate.setDate(startDate.getDate() + 30);
@@ -40,7 +40,7 @@ bot.onText(/\/start/, async (msg) => {
         }, { merge: true });
       }
       else if (Stud_details.data().plan == 2) {
-        bot.sendMessage(msg.chat.id, `Through this message one time invite link of telegroup will be sent `)
+        bot.sendMessage(msg.chat.id, `Through this message one time invite link of telegroup will be sent . Message is being sent after verification of payment`)
         let startDate = new Date();
         let endDate = new Date();
         endDate.setDate(startDate.getDate() + 30);
