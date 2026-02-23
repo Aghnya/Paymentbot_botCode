@@ -119,7 +119,7 @@ router.post('/paymentdone', async (req, res) => {
     res.status(200).send("OK")
     console.log('success2')
     if (Number(req.body.plan) == 1) {
-      bot.sendMessage(req.body.chat_id, `Through this message one time invite link of telegroup will be sent `)
+      bot.sendMessage(req.body.chat_id, `Through this message one time invite link of telegroup will be sent after confirming payment `)
       let startDate = new Date();
       let endDate = new Date();
       endDate.setDate(startDate.getDate() + 30);
@@ -134,7 +134,7 @@ router.post('/paymentdone', async (req, res) => {
       }, { merge: true });
     }
     else if (Number(req.body.plan) == 2) {
-      bot.sendMessage(req.body.chat_id, `Through this message id of mentor will be sent `)
+      bot.sendMessage(req.body.chat_id, `Through this message id of mentor will be sent after confirming payment`)
       let startDate = new Date();
       let endDate = new Date();
       endDate.setDate(startDate.getDate() + 30);
